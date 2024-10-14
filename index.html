@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion de notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicacion de notas</h1>
+    </header>
+    <div class="content-wrapper">
+        <aside class="note-functions">
+            <!--La funcion de eliminar la hare por javascript-->
+            <h2>Opciones:</h2>
+            <div class="option-container">
+                <label for="title-input">
+                    Ingrese titulo de la nota:
+                    <input type="text" id="title-input" placeholder="Tarea de matematica...">
+                </label>
+                <label for="content-input">
+                    Ingrese Contenido de la nota:
+                    <input type="text" id="content-input" placeholder="Estudiar derivadas,limites...">
+                </label>
+                <button id="add-note-btn" aria-label="boton para añadir nota">Añadir nota</button>
+            </div>
+            <div class="option-container">
+                <p>Ordenar notas por:</p>
+                <button id="order-by-title-btn" aria-label="boton para ordenar por titulo alfabaticamente">Titulo</button>
+                <button id="order-by-date-btn" aria-label="boton para ordenar por fecha de creacion">Fecha de creacion</button>
+            </div>
+            <div class="option-container">
+                <p>¿Habilitar edicion?</p>
+                <button id="active-edit-btn" aria-label="boton para activar la edicion de notas">Activar</button>
+                <button id="deactive-edit-btn" aria-label="boton para desactivar la edicion de notas">Desactivar</button>
+            </div>
+            <div class="option-container">
+                <p>Persistencia de datos:</p>
+                <button id="save-changes-btn" aria-label="boton para guardar datos de las notas en el navegador">Guardar Datos</button>
+                <button id="load-changes-btn" aria-label="boton para cargar datos de las notas del navegador">Cargar Datos</button>
+                <button id="delete-all-changes-btn" aria-label="boton para borrar datos de las notas del navegador">Borrar Datos</button>
+            </div>
+        </aside>
+        <main class="notes-container">
+            <!--Aca iran las notas dinamicamente por javascript-->
+        </main>
+        <span id="feedback" aria-live="polite"></span>    
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
